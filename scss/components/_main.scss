@@ -1,0 +1,174 @@
+@import '../base/variables';
+/* Seccion uno */
+#inicio {
+    padding: $padding-sec-general;
+    padding-top: 230px;
+    h2 {
+        color: $color-principal;
+        text-align: center;
+        font-size: $tam-font;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    .quienes-somos {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        @media screen and (max-width: 570px) {
+            flex-direction: column;
+        }
+        .imagen {
+            padding: 10px;
+            img {
+                @media screen and (max-width: 570px) {
+                    width: 70%;
+                }
+            }
+        }
+        .contenido {
+            padding: 10px;
+        }
+    }
+}
+
+/* Seccion dos */
+#servicios {
+    background-color: $color-section;
+    padding: $padding-sec-general;
+    h2 {
+        color: $color-principal;
+        text-align: center;
+        font-size: $tam-font;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    .nuestros-servicios {
+        display: grid;
+        grid-template-columns: repeat(2 , auto);
+        gap: 15px;
+        padding: 20px;
+        @media screen and (max-width: 570px) {
+            grid-template-columns: repeat(1 , auto);
+        }
+        .television, .internet {
+            padding: 50px;
+            display: grid;
+            grid-template-rows: auto 1fr 1fr;
+            .text-internet, .text-television {
+                color: $color-principal;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: $tam-font-service;
+                padding: 20px;
+                }
+            img {
+                transition: all 2s;
+                &:hover {
+                    transform: rotateY(90deg);
+                }
+            }
+            .btn-factura {
+                color: #3668CC;
+                border-color: #3668CC;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+/* Seccion tres */
+#facturacion {
+    background-color: $color-secundario;
+    padding: $padding-sec-general;
+    h2 {
+        color: $color-principal;
+        text-align: center;
+        font-size: $tam-font;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding: 30px;
+        
+    }
+    .seccion-facturacion {
+        display: grid;
+        grid-template-columns: repeat(2 , 50%);
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        .facturacion {
+            text-align: center;
+            transition: all 2s;
+            &:hover {
+                transform: rotateY(360deg);
+            }
+        }
+        .animate__heartBeat {
+            animation-duration: 2s;
+            }
+        .btn-factura {
+            color: #3668CC;
+            border-color: #3668CC;
+            border-radius: 50px;
+            }
+         @media screen and (max-width: 570px) {
+            grid-template-columns: repeat(1 , auto);
+            }
+    }
+}
+
+/* Seccion Cuatro */
+#soporte-tecnico {
+    padding: $padding-sec-general;
+    background-color: $color-principal;
+    h2 {
+        color: $color-secundario;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: $tam-font;
+    }
+    .soporte {
+        .logo-soporte-tecnico {
+            text-align: center;
+        }
+        .botones-soporte {
+            margin: 50px;
+            .btn-soporte {
+                color: $color-secundario;
+                border-color: $color-secundario;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+/*Seccion cinco */
+#contacto {
+    padding: $padding-sec-general;
+    h2 {
+        color: $color-principal;
+        text-align: center;
+        font-size: $tam-font;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    .map-form {
+        padding: 15px;
+        .ubicacion {
+            text-align: center;
+            padding: 20px;
+            iframe {
+                @media screen and (max-width: 570px) {
+                    width: 300px;
+                    height: 225px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../base/variables';
+
+footer {
+    background-color: $color-footer;
+    padding: 30px;
+    margin: auto;
+    .contenedor-footer {
+        display: grid;
+        grid-template-columns: repeat(3 , auto);
+        gap: 30px;
+        @media screen and (max-width:570px) {
+            grid-template-columns: repeat(1 , auto );
+        }
+        .contenido-foo {
+            h3 {
+                color: $color-secundario;
+                font-weight: bold;
+            }
+            p {
+                color: $color-secundario;
+            }
+            .iconos-red {
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 20px;
+            }
+        }
+    }
+}

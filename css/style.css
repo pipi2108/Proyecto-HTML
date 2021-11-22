@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* Colores */
+/* Fuentes */
+/* Tamaño fuentes */
+/* Padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "lato";
+}
+
+/* Header */
+/* Colores */
+/* Fuentes */
+/* Tamaño fuentes */
+/* Padding */
+header {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-bottom: 1px solid #B1B1B1;
+  position: fixed;
+  overflow: hidden;
+  visibility: visible;
+  z-index: 99;
+}
+header #top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+@media screen and (max-width: 570px) {
+  header #top-header .logo img {
+    width: 40%;
+  }
+}
+header #menu {
+  padding-bottom: 20px;
+}
+header #menu nav {
+  text-align: center;
+}
+header #menu nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #1C1B1B;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+header #menu nav a:hover {
+  color: #3668CC;
+}
+@media screen and (max-width: 570px) {
+  header #menu nav a {
+    font-size: 10px;
+  }
+}
+
+/* Main */
+/* Colores */
+/* Fuentes */
+/* Tamaño fuentes */
+/* Padding */
+/* Seccion uno */
+#inicio {
+  padding: 30px;
+  padding-top: 230px;
+}
+#inicio h2 {
+  color: #3668CC;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#inicio .quienes-somos {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+@media screen and (max-width: 570px) {
+  #inicio .quienes-somos {
+    flex-direction: column;
+  }
+}
+#inicio .quienes-somos .imagen {
+  padding: 10px;
+}
+@media screen and (max-width: 570px) {
+  #inicio .quienes-somos .imagen img {
+    width: 70%;
+  }
+}
+#inicio .quienes-somos .contenido {
+  padding: 10px;
+}
+
+/* Seccion dos */
+#servicios {
+  background-color: #EAEAEA;
+  padding: 30px;
+}
+#servicios h2 {
+  color: #3668CC;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#servicios .nuestros-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  padding: 20px;
+}
+@media screen and (max-width: 570px) {
+  #servicios .nuestros-servicios {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+#servicios .nuestros-servicios .television, #servicios .nuestros-servicios .internet {
+  padding: 50px;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+}
+#servicios .nuestros-servicios .television .text-internet, #servicios .nuestros-servicios .television .text-television, #servicios .nuestros-servicios .internet .text-internet, #servicios .nuestros-servicios .internet .text-television {
+  color: #3668CC;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 20px;
+}
+#servicios .nuestros-servicios .television img, #servicios .nuestros-servicios .internet img {
+  transition: all 2s;
+}
+#servicios .nuestros-servicios .television img:hover, #servicios .nuestros-servicios .internet img:hover {
+  transform: rotateY(90deg);
+}
+#servicios .nuestros-servicios .television .btn-factura, #servicios .nuestros-servicios .internet .btn-factura {
+  color: #3668CC;
+  border-color: #3668CC;
+  border-radius: 50px;
+}
+
+/* Seccion tres */
+#facturacion {
+  background-color: white;
+  padding: 30px;
+}
+#facturacion h2 {
+  color: #3668CC;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 30px;
+}
+#facturacion .seccion-facturacion {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#facturacion .seccion-facturacion .facturacion {
+  text-align: center;
+  transition: all 2s;
+}
+#facturacion .seccion-facturacion .facturacion:hover {
+  transform: rotateY(360deg);
+}
+#facturacion .seccion-facturacion .animate__heartBeat {
+  animation-duration: 2s;
+}
+#facturacion .seccion-facturacion .btn-factura {
+  color: #3668CC;
+  border-color: #3668CC;
+  border-radius: 50px;
+}
+@media screen and (max-width: 570px) {
+  #facturacion .seccion-facturacion {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+/* Seccion Cuatro */
+#soporte-tecnico {
+  padding: 30px;
+  background-color: #3668CC;
+}
+#soporte-tecnico h2 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+#soporte-tecnico .soporte .logo-soporte-tecnico {
+  text-align: center;
+}
+#soporte-tecnico .soporte .botones-soporte {
+  margin: 50px;
+}
+#soporte-tecnico .soporte .botones-soporte .btn-soporte {
+  color: white;
+  border-color: white;
+  border-radius: 50px;
+}
+
+/*Seccion cinco */
+#contacto {
+  padding: 30px;
+}
+#contacto h2 {
+  color: #3668CC;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#contacto .map-form {
+  padding: 15px;
+}
+#contacto .map-form .ubicacion {
+  text-align: center;
+  padding: 20px;
+}
+@media screen and (max-width: 570px) {
+  #contacto .map-form .ubicacion iframe {
+    width: 300px;
+    height: 225px;
+  }
+}
+
+/* Footer */
+/* Colores */
+/* Fuentes */
+/* Tamaño fuentes */
+/* Padding */
+footer {
+  background-color: #0B307A;
+  padding: 30px;
+  margin: auto;
+}
+footer .contenedor-footer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+}
+@media screen and (max-width: 570px) {
+  footer .contenedor-footer {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+footer .contenedor-footer .contenido-foo h3 {
+  color: white;
+  font-weight: bold;
+}
+footer .contenedor-footer .contenido-foo p {
+  color: white;
+}
+footer .contenedor-footer .contenido-foo .iconos-red {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

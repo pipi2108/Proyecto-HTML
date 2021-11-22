@@ -1,0 +1,45 @@
+@import '../base/variables';
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: $color-secundario;
+    border-bottom: 1px solid $color-border;
+    position: fixed;
+    overflow: hidden;
+    visibility: visible;
+    z-index: 99;
+    #top-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .logo {
+            img {
+                @media screen and (max-width:570px) {
+                    width: 40%;
+                }
+            }
+        }
+    }
+    #menu {
+        padding-bottom: 20px;
+        nav {
+            text-align: center;
+            a {
+                margin-right: 10px;
+                text-decoration: none;
+                color: $color-texto;
+                text-transform: uppercase;
+                font-size: $tam-font-menu;
+                font-weight: bold;
+                &:hover {
+                    color: $color-principal;
+                }
+                @media screen and (max-width:570px) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+}
