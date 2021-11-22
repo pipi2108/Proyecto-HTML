@@ -28,6 +28,11 @@
         }
         .contenido {
             padding: 10px;
+            .alejo-rural{
+                color: $color-principal;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
         }
     }
 }

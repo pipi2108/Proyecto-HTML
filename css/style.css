@@ -103,6 +103,11 @@ header #menu nav a:hover {
 #inicio .quienes-somos .contenido {
   padding: 10px;
 }
+#inicio .quienes-somos .contenido .alejo-rural {
+  color: #3668CC;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 /* Seccion dos */
 #servicios {
