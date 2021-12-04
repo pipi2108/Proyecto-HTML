@@ -250,6 +250,11 @@ header #menu nav a:hover {
     height: 225px;
   }
 }
+#contacto .seccion-contacto .formulario .btn-enviar {
+  color: #3668CC;
+  border-color: #3668CC;
+  border-radius: 50px;
+}
 
 /* Footer */
 /* Colores */
