@@ -27,6 +27,7 @@ header {
   background-color: white;
   border-bottom: 1px solid #B1B1B1;
   position: fixed;
+  top: 0;
   overflow: hidden;
   visibility: visible;
   z-index: 99;
@@ -222,7 +223,7 @@ header #menu nav a:hover {
 #soporte-tecnico .soporte .botones-soporte .btn-soporte {
   color: white;
   border-color: white;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
 /*Seccion cinco */
@@ -254,6 +255,17 @@ header #menu nav a:hover {
   color: #3668CC;
   border-color: #3668CC;
   border-radius: 50px;
+}
+
+/* Botones */
+/* Colores */
+/* Fuentes */
+/* Tamaño fuentes */
+/* Padding */
+/* Secciones Preguntas frecuentes*/
+#sec-principal-preguntas {
+  padding-top: 230px;
+  background-image: url("src/Fotos/preguntas-frecuentes/preguntas-frecuentes.jpgs");
 }
 
 /* Footer */
