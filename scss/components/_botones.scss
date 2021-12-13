@@ -181,14 +181,16 @@
     padding: $padding-sec-general;
     .imagen-resumen {
         text-align: center;
-        border-radius: 50%;
+        img {
+            border-radius: 10%;
+        }
     }
     .text-resumen {
         display: grid;
         grid-template-rows: repeat(2, auto);
         h4 {
             color: $color-texto;
-            text-align: center;
+            text-align: left;
             font-weight: bold;
             text-transform: uppercase;
             padding-top: 20px;
@@ -197,7 +199,7 @@
         }
         p {
             color: $color-texto;
-            text-align: center;
+            text-align: left;
             font-weight: bold;
             text-transform: uppercase;
             padding-right: 100px;
@@ -208,10 +210,87 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
     background-color: $color-section-2;
+    padding: 0px 350px;
+    .text-principal {
+        color: $color-principal;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 15px;
+    }
+    .text-principal-2 {
+        color: $color-principal;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 15px
+    }
+    .text-distinto {
+        text-align: center;
+        color: $color-border;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 15px;
+    }
+    .signo-mas-1 {
+        text-align: center;
+        font-size: 50px;
+        color: $color-signo-1;
+        text-align: center;
+        font-weight: bold;
+    }
+    .signo-mas-2 {
+        text-align: center;
+        font-size: 50px;
+        color: $color-signo-2;
+        text-align: center;
+        font-weight: bold;
+    }
 }
 .seccion-categorias {
+    h3 {
+        text-align: center;
+        padding: $padding-sec-general;
+    }
     .categorias {
         display: grid;
         grid-template-columns: repeat(5, auto);
+        padding: 30px;
+        .cont-categorias {
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            text-align: center;
+            .imagen-categorias {
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+.sec-destacados {
+    background-color: $color-principal;
+    padding: $padding-sec-general;
+    h3 {
+        text-align: center;
+        color: $color-secundario;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .contenido-destacados {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        padding: 15px;
+        .destacados {
+            padding: 20px;
+            .mt-0 {
+                margin-bottom: 40px;
+            }
+            .mt-1 {
+                margin-bottom: 64px;
+            }
+        }
     }
 }
