@@ -151,6 +151,8 @@
                 border-color: $color-secundario;
                 border-radius: 100px;
                 font-size: 30px;
+                width: 100%;
+                margin-top: 20px;
             }
         }
     }
@@ -190,4 +192,74 @@
             }
         }
     }
+}
+
+/* Seccion seis */
+#novedades {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    .sec-novedades {
+        background-color: $color-section;
+        padding: $padding-sec-general;
+    h2 {
+        color: $color-principal;
+        text-align: center;
+        font-size: $tam-font;
+        font-weight: bold;
+        text-transform: uppercase;  
+    }
+    p {
+        text-align: center;
+    }
+    .sec-estados {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        .imagen-estados {
+            text-align: center;
+            p {
+                font-weight: bold;
+            }
+        }
+        .imagen-estados-2 {
+            text-align: center;
+            p {
+                font-weight: bold;
+                padding-top: 8px;
+            }
+        }
+    }
+    }
+    .eventos {
+        background-color: $color-section-2;
+        padding: $padding-sec-general;
+        h2 {
+            color: $color-principal;
+            text-align: center;
+            font-size: $tam-font;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .calendario {
+            display: grid;
+            grid-template-columns: repeat(2, 30% 70%);
+            .imagen-calendario {
+                text-align: right;
+            }
+            .text-calendario {
+                h3 {
+                    padding-top: 30px;
+                    color: $color-numero-calendario;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .text-evento {
+            p {
+                text-align: center;
+                padding: 0px 130px;
+            }
+        }
+    }
+
 }
