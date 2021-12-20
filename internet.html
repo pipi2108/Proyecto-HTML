@@ -21,12 +21,6 @@
             <div class="logo">
                 <img src="src/Fotos/LOGO_ALEJO_RURAL.PNG" alt class="logo-empresa" width="70%" height="auto">
             </div>
-
-            <div class="mi-cuenta">
-                <img src="src/Fotos/icons/user.png" alt="icono-usuario" width="24" height="auto">
-                <a class="boton"> Mi cuenta </a>
-            </div>
-
         </section>
 
         <section id="menu">
@@ -44,17 +38,21 @@
     <main>
         <!-- Seccion uno - Boton internet -->
         <section class="sec-principal-int">
-            <h2> Internet </h2>
-            <p> Te brindamos el mejor servicio de Internet para el hogar, para que vos y tu familia disfruten de un mundo de posibilidades.
-                Elegí tu plan de y la velocidad que más se adapte a tus necesidades.</p>
+            <div class="layer">
+                <div class="text-internet">
+                    <h2> Internet </h2>
+                    <p> Te brindamos el mejor servicio de Internet para el hogar, para que vos y tu familia disfruten de un mundo de posibilidades.
+                    Elegí tu plan de y la velocidad que más se adapte a tus necesidades.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Seccion dos - Boton internet -->
-        <section class="servicios-principales">
+        <div class="servicios-principales">
             <h2> Nuestros principales servicios </h2>
             <p> A continuación le contamos que servicios ofrecemos </p>
-            <div class="sec-categorias">
-                <div class="categoria-servicios">
+            <div class="row">
+                <div class="col-md-4 col-sd-12 sec-categorias">
                     <div class="imagen-categoria">
                         <img src="src/Fotos/internet/Categoria/router1.png" alt="cat-router">
                     </div>
@@ -68,7 +66,7 @@
                         Se trata de una conexión simétrica y con variantes de velocidades para satisfacer las necesidades de nuestros clientes. </p>
                    </div>
                 </div>
-                <div class="categoria-servicios">
+                <div class="col-md-4 col-sd-12 sec-categorias">
                     <div class="imagen-categoria">
                         <img src="src/Fotos/internet/Categoria/wifi-house.png" alt="cat-wifi">
                     </div>
@@ -78,14 +76,14 @@
                     <div>
                         <p> Esta conexión utiliza un cable de fibra óptica para acercar a los usuarios de manera bidireccional, 
                             libre de problemas de ruidos, los servicios de internet, telefonía y televisión, 
-                            transmitiendo los datos a través de nodos. </p>
-                        <p> Para ello, se conecta al usuario a un nodo zonal (repetidor), próximo a su hogar, 
+                            transmitiendo los datos a través de nodos.Para ello, se conecta al usuario a un nodo zonal (repetidor), próximo a su hogar, 
                             a través de cable y los nodos zonales entre sí mediante fibra óptica. A diferencia de la conexión FTTH, 
                             donde la fibra óptica llega hasta el hogar, en el caso de la conexión HFC no es así ya que el último tramo es cable, 
                             que es lo que recibe finalmente en su vivienda el usuario. </p>
+                        
                     </div>
                 </div>
-                <div class="categoria-servicios">
+                <div class="col-md-4 col-sd-12 sec-categorias">
                     <div class="imagen-categoria">
                         <img src="src/Fotos/internet/Categoria/fibra-optica.png" alt="cat-fibra-optica">
                     </div>
@@ -99,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Seccion tres - Boton internet -->
         <section class="sec-medicion">
@@ -111,14 +109,66 @@
                     <h4> Validá la velocidad de tu conexión </h4>
                 </div>
                 <div class="boton-test">
-                    <a href="https://fast.com/es/"><button class="btn btn-primary btn-test">HACER TEST</button></a>
+                    <a href="https://fast.com/es/" target="_blank"><button class="btn btn-primary btn-test">HACER TEST</button></a>
                 </div>
             </div>
         </section>
 
         <!-- Seccion cuatro - Boton internet -->
-        <section>
+        <section class="sec-planes">
+            <h3> Conocé nuestros planes </h3>
+            <div class="sec-precios">
+                <div class="zonas"> 
+                    <div class="card">
+                        <div class="card-body">
+                          <p> Elegí la zona en que estás</p>
+                          <div>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona la zona</option>
+                                <option value="1">Alejo Ledesma</option>
+                                <option value="2">Arias</option>
+                                <option value="3">Benjamin Gould</option>
+                              </select>
+                          </div>
+                          <div class="form-check sec-plan-condicion">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-condicion" for="flexCheckDefault">
+                                Los datos personales recolectados a través de la presente y/o en cualquier otro 
+                                formulario serán tratados de conformidad con lo dispuesto en la Política de Privacidad 
+                                publicada en la web de ALEJO RURAL TV, la cual declaro haber leído y aceptado.
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="planes">
+                    <div class="content-card">
+                        <div class="card text-center">
+                            <div class="card-header text-white bg-primary">
+                                <p> Plan hogar </p>
+                                <h3> 10 Megas </h3>
+                            </div>
+                            <div class="card-body text-black">
+                              <h3 class="card-title">$1.800,00</h3>
+                              <p class="card-text">Instalación bonificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <div class="card text-center">
+                            <div class="card-header text-white bg-primary">
+                                <p> Plan Rural </p>
+                                <h3> 8 Megas </h3>
+                            </div>
+                            <div class="card-body text-black">
+                              <h3 class="card-title">$2.900,00</h3>
+                              <p class="card-text">Instalación bonificada</p>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </section>
 
     </main>
@@ -128,15 +178,15 @@
         <div class="contenedor-footer">
             <div class="contenido-foo">
                 <h3> Casa central</h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatum, quisquam ad eius
-                    provident voluptatibus cupiditate. Fugiat quod, nam, unde cum cumque ipsa veniam delectus
-                    ipsam ipsum, voluptate laborum labore. </p>
+                <p> Alejo Ledesma, Córdoba: Ruta Nacional Nº 8 KM 433 - CP X2662CNA
+                    (3468) 4534546</p>
+                <p> Guardia:  (3468) 4245312 </p>
             </div>
             <div class="contenido-foo">
                 <h3> Sucursales</h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatum, quisquam ad eius
-                    provident voluptatibus cupiditate. Fugiat quod, nam, unde cum cumque ipsa veniam delectus
-                    ipsam ipsum, voluptate laborum labore. </p>
+                <p> Alejo Ledesma, Córdoba: Ruta Nacional Nº 8 KM 433 - CP X2662CNA
+                    (3468) 4534546</p>
+                <p> Guardia:  (3468) 4245312 </p>
             </div>
             <div class="contenido-foo">
                 <h3> Seguinos en nuestras redes</h3>

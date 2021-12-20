@@ -223,6 +223,11 @@ header #menu nav a:hover {
 #soporte-tecnico .soporte .botones-soporte {
   margin: 50px;
 }
+@media screen and (max-width: 570px) {
+  #soporte-tecnico .soporte .botones-soporte {
+    margin: 0px;
+  }
+}
 #soporte-tecnico .soporte .botones-soporte .boton {
   text-align: center;
 }
@@ -273,6 +278,11 @@ header #menu nav a:hover {
 #novedades {
   display: grid;
   grid-template-columns: repeat(2, auto);
+}
+@media screen and (max-width: 570px) {
+  #novedades {
+    grid-template-columns: repeat(1, auto);
+  }
 }
 #novedades .sec-novedades {
   background-color: #EAEAEA;
@@ -390,11 +400,22 @@ header #menu nav a:hover {
   padding-top: 100px;
   padding-bottom: 100px;
   background-image: url("https://i.ibb.co/wwBjMbv/header-internet.jpg");
+  position: relative;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 }
-.sec-principal-int h2 {
+.sec-principal-int .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  height: 100%;
+}
+.sec-principal-int .layer .text-internet {
+  padding-top: 50px;
+}
+.sec-principal-int .layer .text-internet h2 {
   color: white;
   text-align: center;
   font-size: 35px;
@@ -403,21 +424,29 @@ header #menu nav a:hover {
   letter-spacing: 0.2em;
   margin-bottom: 0;
 }
-.sec-principal-int p {
+.sec-principal-int .layer .text-internet p {
   color: white;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding: 0px 200px;
   margin-bottom: 0;
 }
+@media screen and (max-width: 570px) {
+  .sec-principal-int .layer .text-internet p {
+    padding: 0px 50px;
+  }
+}
 
+.servicios-principales {
+  padding: 30px;
+}
 .servicios-principales h2 {
   color: #3668CC;
   text-align: center;
   font-size: 35px;
   font-weight: bold;
+  font-size: 22px;
   text-transform: uppercase;
   margin-bottom: 0;
   padding: 30px;
@@ -426,28 +455,28 @@ header #menu nav a:hover {
   color: #1C1B1B;
   text-align: center;
   font-weight: bold;
-  text-transform: uppercase;
+  font-size: 16px;
   margin-bottom: 0;
 }
 .servicios-principales .sec-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  padding: 20px;
+  padding: 10px 40px;
 }
-.servicios-principales .sec-categorias .categoria-servicios {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  padding: 20px;
-}
-.servicios-principales .sec-categorias .categoria-servicios .imagen-categoria {
+.servicios-principales .sec-categorias .imagen-categoria {
   text-align: center;
+  padding: 20px 0px;
 }
-.servicios-principales .sec-categorias .categoria-servicios h3 {
+.servicios-principales .sec-categorias h3 {
   color: #3668CC;
   text-align: center;
   font-weight: bold;
+  font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 0;
+  padding: 20px 0px;
+}
+.servicios-principales .sec-categorias p {
+  font-size: 12px;
+  padding: 10px 10px;
 }
 
 .sec-medicion {
@@ -459,8 +488,18 @@ header #menu nav a:hover {
   grid-template-columns: repeat(2, auto);
   padding: 0px 160px;
 }
+@media screen and (max-width: 570px) {
+  .sec-medicion {
+    padding: 0px 10px;
+  }
+}
 .sec-medicion .imagen-medicion {
   text-align: center;
+}
+@media screen and (max-width: 570px) {
+  .sec-medicion .imagen-medicion img {
+    width: 80px;
+  }
 }
 .sec-medicion .text-medicion {
   display: grid;
@@ -474,6 +513,12 @@ header #menu nav a:hover {
   padding-top: 100px;
   margin-bottom: 0;
 }
+@media screen and (max-width: 570px) {
+  .sec-medicion .text-medicion h4 {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+}
 .sec-medicion .text-medicion .boton-test {
   text-align: center;
 }
@@ -483,15 +528,78 @@ header #menu nav a:hover {
   border-radius: 50px;
 }
 
+.sec-planes {
+  background-color: #DAD9D9;
+  padding: 30px;
+}
+.sec-planes h3 {
+  text-align: center;
+  font-weight: bold;
+}
+.sec-planes .sec-precios {
+  display: grid;
+  grid-template-columns: repeat(2, 40% 60%);
+  padding: 30px;
+}
+@media screen and (max-width: 570px) {
+  .sec-planes .sec-precios {
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 10px;
+  }
+}
+.sec-planes .sec-precios .zonas {
+  text-align: center;
+  padding: 0px 60px;
+}
+.sec-planes .sec-precios .zonas .card {
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid #1C1B1B;
+}
+.sec-planes .sec-precios .zonas .card p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.sec-planes .sec-precios .zonas .card .sec-plan-condicion {
+  padding-top: 20px;
+}
+.sec-planes .sec-precios .zonas .card .sec-plan-condicion .text-condicion {
+  font-size: 12px;
+  text-align: justify;
+}
+.sec-planes .sec-precios .planes {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+}
+.sec-planes .sec-precios .planes .content-card {
+  padding: 0px 80px;
+}
+@media screen and (max-width: 570px) {
+  .sec-planes .sec-precios .planes .content-card {
+    padding: 0px 50px;
+  }
+}
+.sec-planes .sec-precios .planes .content-card .card {
+  border-radius: 12px;
+}
+.sec-planes .sec-precios .planes .content-card .card .card-header {
+  border-radius: 12px 12px 0px 0px;
+}
+
 /* Fin secciones Internet */
 /* Secciones Television */
 .sec-principal-tv {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0px;
   background-image: url("https://i.ibb.co/vdq9MTd/header-television.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+}
+@media screen and (max-width: 570px) {
+  .sec-principal-tv {
+    padding: 10px 0px;
+  }
 }
 .sec-principal-tv h2 {
   color: white;
@@ -515,6 +623,11 @@ header #menu nav a:hover {
   grid-template-columns: repeat(2, auto);
   padding: 30px;
 }
+@media screen and (max-width: 570px) {
+  .sec-resumen {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 .sec-resumen .imagen-resumen {
   text-align: center;
 }
@@ -534,6 +647,12 @@ header #menu nav a:hover {
   margin-bottom: 0;
   padding-right: 70px;
 }
+@media screen and (max-width: 570px) {
+  .sec-resumen .text-resumen h4 {
+    text-align: center;
+    padding-right: 10px;
+  }
+}
 .sec-resumen .text-resumen p {
   color: #1C1B1B;
   text-align: left;
@@ -541,12 +660,23 @@ header #menu nav a:hover {
   text-transform: uppercase;
   padding-right: 100px;
 }
+@media screen and (max-width: 570px) {
+  .sec-resumen .text-resumen p {
+    text-align: center;
+    padding-right: 10px;
+  }
+}
 
 .banner {
   display: grid;
   grid-template-columns: repeat(5, auto);
   background-color: #EFEFEF;
   padding: 0px 350px;
+}
+@media screen and (max-width: 570px) {
+  .banner {
+    padding: 0px 10px;
+  }
 }
 .banner .text-principal {
   color: #3668CC;
@@ -594,6 +724,11 @@ header #menu nav a:hover {
   grid-template-columns: repeat(5, auto);
   padding: 30px;
 }
+@media screen and (max-width: 570px) {
+  .seccion-categorias .categorias {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 .seccion-categorias .categorias .cont-categorias {
   display: grid;
   grid-template-rows: repeat(2, auto);
@@ -610,7 +745,6 @@ header #menu nav a:hover {
 .sec-destacados h3 {
   text-align: center;
   color: white;
-  text-align: center;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -619,14 +753,155 @@ header #menu nav a:hover {
   grid-template-columns: repeat(5, auto);
   padding: 15px;
 }
+@media screen and (max-width: 570px) {
+  .sec-destacados .contenido-destacados {
+    grid-template-columns: repeat(1, auto);
+  }
+}
 .sec-destacados .contenido-destacados .destacados {
   padding: 20px;
 }
-.sec-destacados .contenido-destacados .destacados .mt-0 {
-  margin-bottom: 40px;
+.sec-destacados .contenido-destacados .destacados .info-card {
+  height: 120px;
 }
-.sec-destacados .contenido-destacados .destacados .mt-1 {
-  margin-bottom: 64px;
+
+.anuncio {
+  background-color: white;
+  padding: 30px;
+}
+@media screen and (max-width: 570px) {
+  .anuncio {
+    padding: 10px;
+  }
+}
+.anuncio .anuncio-primera-parte {
+  padding: 0px 120px;
+}
+@media screen and (max-width: 570px) {
+  .anuncio .anuncio-primera-parte {
+    padding: 0px 5px;
+  }
+}
+.anuncio .anuncio-primera-parte .año {
+  color: #3668CC;
+  font-size: 25px;
+}
+.anuncio .anuncio-segunda-parte {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 0px 85px;
+}
+@media screen and (max-width: 570px) {
+  .anuncio .anuncio-segunda-parte {
+    padding: 0px 5px;
+  }
+}
+.anuncio .anuncio-segunda-parte .imagen-anuncio {
+  text-align: right;
+}
+@media screen and (max-width: 570px) {
+  .anuncio .anuncio-segunda-parte .imagen-anuncio img {
+    width: 135px;
+  }
+}
+.anuncio .anuncio-segunda-parte .text-anuncio-1 {
+  text-align: center;
+}
+.anuncio .anuncio-segunda-parte .text-anuncio-1 h4 {
+  margin-top: 15px;
+}
+@media screen and (max-width: 570px) {
+  .anuncio .anuncio-segunda-parte .text-anuncio-1 h4 {
+    margin-top: 8px;
+    font-size: 10px;
+  }
+}
+.anuncio .anuncio-segunda-parte .text-anuncio-2 {
+  text-align: left;
+}
+.anuncio .anuncio-segunda-parte .text-anuncio-2 h3 {
+  color: #3668CC;
+  font-size: 40px;
+}
+@media screen and (max-width: 570px) {
+  .anuncio .anuncio-segunda-parte .text-anuncio-2 h3 {
+    font-size: 19px;
+  }
+}
+
+/* Fin Secciones Television */
+/* Secciones facturación */
+.sec-principal-fac {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("https://i.ibb.co/cJsbvGS/Whats-App-Image-2021-12-19-at-15-31-52.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.sec-principal-fac .layer-fac {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  height: 100%;
+  width: 100%;
+}
+.sec-principal-fac .layer-fac .text-facturacion {
+  padding-top: 50px;
+}
+.sec-principal-fac .layer-fac .text-facturacion h2 {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+}
+.sec-principal-fac .layer-fac .text-facturacion p {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 0;
+}
+
+.estados-factura {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 50px;
+  padding: 30px 120px;
+}
+@media screen and (max-width: 570px) {
+  .estados-factura {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.estados-factura .card {
+  border: 1px solid black;
+  border-radius: 12px;
+}
+.estados-factura .card .card-estado h4, .estados-factura .card .card-estado h3 {
+  color: #3668CC;
+  font-weight: bold;
+}
+.estados-factura .card .card-estado .pago {
+  display: grid;
+  grid-template-columns: repeat(2, 40px 70px);
+}
+.estados-factura .card .card-estado .pago .pagado {
+  text-align: left;
+}
+.estados-factura .card .card-facturas h4 {
+  color: #3668CC;
+  font-weight: bold;
+}
+.estados-factura .card .card-facturas .list-facturas .imagen-fac-2 {
+  text-align: right;
 }
 
 /* Footer */

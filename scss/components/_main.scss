@@ -143,6 +143,9 @@
         }
         .botones-soporte {
             margin: 50px;
+            @media screen and (max-width:570px) {
+                margin: 0px;
+            }
             .boton {
                 text-align: center;
             }
@@ -198,6 +201,9 @@
 #novedades {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    @media screen and (max-width:570px) {
+        grid-template-columns: repeat(1, auto);
+    }
     .sec-novedades {
         background-color: $color-section;
         padding: $padding-sec-general;
@@ -261,5 +267,4 @@
             }
         }
     }
-
 }
